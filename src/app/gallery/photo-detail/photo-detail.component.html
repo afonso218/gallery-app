@@ -1,0 +1,30 @@
+<div class="container">
+
+    <loading *ngIf="!isFetch"></loading>
+
+    <!-- photo info -->
+    <div *ngIf="isFetch" class="row">
+
+        <div *ngIf="data == null" class="col-md-12">
+            <div class="alert alert-warning center-block" role="alert">
+                <strong>Sorry!</strong> I can't connect with server. :(
+            </div>
+        </div>
+
+        <div *ngIf="data != null" class="col-md-12">
+            <div class="photo">
+                <div class="image">
+                    <img src="{{data.url}}" alt="{{data.title}}">
+                </div>
+                <div class="image-info">
+                    <p><strong>{{data.title}}</strong><small> #{{data.id}}</small></p>
+                    <i class="fa fa-play mr-3"> {{data.views}} </i>
+                    <i class="fa fa-thumbs-o-up mr-3"> {{data.likes}} </i>
+                    <i class="fa fa-thumbs-o-down mr-3"> {{data.unlikes}} </i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

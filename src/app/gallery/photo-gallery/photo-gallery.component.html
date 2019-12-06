@@ -1,0 +1,13 @@
+<a routerLink="/gallery/photo/{{data.id}}">
+    <div class="photo">
+        <div class="image">
+            <img src="{{data.url}}" alt="{{data.title}}">
+        </div>
+        <div class="image-info">
+            <p><strong>{{data.title}}</strong><small> #{{data.id}}</small></p>
+            <i class="fa fa-play mr-3"> {{data.views}} </i>
+            <a><i class="fa fa-thumbs-o-up mr-3"> {{data.likes}} </i></a>
+            <a><i class="fa fa-thumbs-o-down mr-3"> {{data.unlikes}} </i></a>
+        </div>
+    </div>
+</a>

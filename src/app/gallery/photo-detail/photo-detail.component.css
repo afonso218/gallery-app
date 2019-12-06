@@ -1,0 +1,35 @@
+
+.photo {
+    color: white;
+    background-color: rgb(80, 80, 80);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.image {
+    text-align: center;
+    display: block;
+    background-repeat: no-repeat;
+    background-color: black;
+    overflow: hidden;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image-info {
+    text-align: center;
+}
+
+.fa.fa-thumbs-o-up:hover{
+    cursor: pointer;
+    color: greenyellow;
+}
+.fa.fa-thumbs-o-down:hover{
+    cursor: pointer;
+    color: red;
+}
+.fa.fa-play:hover{
+    color: slategray;
+}

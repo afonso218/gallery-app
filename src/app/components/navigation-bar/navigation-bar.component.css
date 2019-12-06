@@ -1,0 +1,15 @@
+mat-toolbar {
+   background-color: rgb(73, 73, 73);
+   max-height: 40px;
+   min-height: 40px;
+   margin-bottom: 5px;
+}
+
+a{
+   color: white;
+}
+
+.box {
+   padding: 5px 5px 5px 5px;
+   color: white;
+}
