@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "version": "0.0.0",
+  "name": "gallery-app",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mock": "json-server --watch mocks/photos.mock.json"
+    "mock-server": "json-server --watch mocks/photos.mock.json"
   },
   "private": true,
   "dependencies": {
