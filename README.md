@@ -1,4 +1,5 @@
 # Gallery App
+![Image of Yaktocat](https://github.com/afonso218/gallery-app/blob/master/gallery-app.png)
 
 # Tech
 
