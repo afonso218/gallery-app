@@ -1,14 +1,14 @@
 {
   "name": "gallery-app",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently --kill-others \"npm run serve:client\" \"npm run serve:server\"",
+    "serve:client": "ng serve",
+    "serve:server": "json-server --watch mocks/photos.mock.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "mock-server": "json-server --watch mocks/photos.mock.json"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
