@@ -2,9 +2,7 @@
   "name": "gallery-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run serve:client\" \"npm run serve:server\"",
-    "serve:client": "ng serve",
-    "serve:server": "json-server --watch mocks/photos.mock.json",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +24,7 @@
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
+    "prettier": "^2.0.5",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

@@ -1,20 +1,23 @@
-import { Component, HostListener, AfterViewInit } from "@angular/core";
-import { PhotoModel } from "../models/photo.model";
-import { ApiService } from "../services/photos.api.service";
+import { AfterViewInit, Component, HostListener } from '@angular/core';
+
+import { ApiService } from '../services/photos.api.service';
+import { PhotoModel } from '../models/photo.model';
+import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: "gallery",
-  templateUrl: "./gallery.component.html",
-  styleUrls: ["./gallery.component.css"]
+  selector: 'gallery',
+  templateUrl: './gallery.component.html',
+  styleUrls: ['./gallery.component.css'],
 })
 export class GalleryComponent implements AfterViewInit {
-  MAX_RESULTS_PER_ROW = 4;
+  private photoWidth = environment.photo_min_width;
+  private photoHeight = environment.photo_min_height;
+  private MAX_RESULTS_PER_ROW = environment.photos_per_row;
 
-  page: number;
-  photos: PhotoModel[];
-  isLoading: boolean;
-  isFull: boolean;
-  results_to_load: number;
+  public page: number;
+  public photos: PhotoModel[];
+  public isLoading: boolean;
+  public isFull: boolean;
 
   constructor(private apiService: ApiService) {
     this.photos = [];
@@ -27,7 +30,7 @@ export class GalleryComponent implements AfterViewInit {
     this.load();
   }
 
-  @HostListener("window:scroll", ["$event"])
+  @HostListener('window:scroll', ['$event'])
   handleScrollEvent(event: Event): void {
     if (this.isToLoad()) {
       this.load();
@@ -38,9 +41,9 @@ export class GalleryComponent implements AfterViewInit {
     this.isLoading = true;
     this.apiService
       .getPhotos(this.page, this.MAX_RESULTS_PER_ROW)
-      .then(result => {
-        result.forEach(element => {
-          element.url += element.id + "/250/250";
+      .then((result) => {
+        result.forEach((element) => {
+          element.url = `${element.url}${element.id}/${this.photoWidth}/${this.photoHeight}`;
           this.photos.push(element);
         });
         if (result.length < this.MAX_RESULTS_PER_ROW) {
@@ -63,7 +66,7 @@ export class GalleryComponent implements AfterViewInit {
     return (
       !this.isFull &&
       !this.isLoading &&
-      window.innerHeight + window.scrollY == document.body.scrollHeight
+      window.innerHeight + window.scrollY === document.body.scrollHeight
     );
   }
 }

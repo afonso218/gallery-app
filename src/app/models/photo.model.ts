@@ -1,4 +1,4 @@
-export class PhotoModel {
+export interface PhotoModel {
   id: string;
   title: string;
   url: string;
