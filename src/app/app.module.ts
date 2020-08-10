@@ -1,4 +1,5 @@
-import { MatInputModule, MatToolbarModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AddPhotoComponent } from './gallery/add-photo/add-photo.component';
