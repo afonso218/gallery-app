@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { NgModule } from '@angular/core';
-import { PageNotFoundComponent } from './components/error/pageNotFound.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PhotoComponent } from './gallery/photo-gallery/photo-gallery.component';
 import { PhotoDetailComponent } from './gallery/photo-detail/photo-detail.component';
 
